@@ -13,8 +13,8 @@ def eval_transition_dipole(ndb,kpoint=0,transition=[0,1],component=0):
     """
     dipoles = U.get_variable_from_db(ndb,'DIP_iR')
     dip = dipoles[kpoint][transition[0]][transition[1]][component]
-    dip_mod = np.sqrt(dip[0]**2+dip[1]**2)
-    return dip_mod
+    #dip_mod = np.sqrt(dip[0]**2+dip[1]**2)
+    return dip
 
 def eval_trans_energy(save,kpoint=0,transition=[0,1],
                       set_scissor=None,set_gap=None,set_direct_gap=None):
